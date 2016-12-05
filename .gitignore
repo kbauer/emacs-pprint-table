@@ -1,0 +1,7 @@
+# --- General exclusion rules ---
+*.tmp
+\#*
+.#*
+*~
+# --- exclusions for elisp ---
+*.elc
