@@ -140,6 +140,8 @@ With prefix argument, the sexp is not evaluated.
     (erase-buffer)
     (toggle-truncate-lines +1)
     (pprint-table table (current-buffer))
+    (unless (eq major-mode 'emacs-lisp-mode)
+      (emacs-lisp-mode))
     (goto-char (point-min))))
 
 
