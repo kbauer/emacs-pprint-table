@@ -71,11 +71,13 @@
                      (t (cl-loop 
                          with row-as-vec = (cl-coerce row-as-strings 'vector)
                          for i upfrom 0
-                         for w in col-widths 
+                         for rest on col-widths 
+                         for w = (car rest)
                          for s = (if (< i (length row-as-vec))
                                      (aref row-as-vec i)
                                    "")
                          collect s
+                         if (cdr rest)
                          collect (make-string (- (1+ w) (length s)) ? ))))
              ,(cond ((vectorp row-as-strings) "]")
                     ((listp row-as-strings) ")")
