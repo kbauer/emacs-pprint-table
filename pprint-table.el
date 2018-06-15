@@ -1,4 +1,36 @@
-;; -*- mode:emacs-lisp;coding:utf-8-unix;lexical-binding:t;byte-compile-dynamic:t; -*-
+;;; pprint-table.el --- pretty-printing tabular data  -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2018  Klaus-Dieter Bauer
+
+;; Author: Klaus-Dieter Bauer;; -*- mode:emacs-lisp;coding:utf-8-unix;lexical-binding:t;byte-compile-dynamic:t; -*- <kdb.devel@gmail.com>
+;; Keywords: lisp, tools, tabular, table
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; Utility library for pretty-printing tabular emacs-lisp data.
+;; 
+;; In particular through
+;; 
+;;   - `pprint-table-display', which displays a tabular value in a buffer,
+;;   - `pprint-table-to-string', which ddoes the formatting, and
+;;   - `pprint-table', which implements a `print'-like interface.
+
+;;; Code:
+
+
 
 (require 'cl-macs)
 
@@ -192,3 +224,8 @@ See also
 ;; '(1 (1 2 3) ("1" "2" "3") [foo bar baz more stuff] "a string is just printed")
 
 (provide 'pprint-table)
+;;; pprint-table.el ends here
+
+
+
+
